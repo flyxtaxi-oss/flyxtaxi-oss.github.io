@@ -1,0 +1,32 @@
+.visual-story{background:#efeae0;color:#1b3028;padding:118px clamp(24px,7.1vw,116px) 132px;overflow:clip}
+.visual-story-head{max-width:870px;margin:0 auto 85px;text-align:center}
+.visual-story-head .kicker{display:block;color:#987248;letter-spacing:.18em;font-size:10px;font-weight:700}
+.visual-story-head h2{font:400 clamp(50px,5.7vw,86px)/1.03 var(--serif);letter-spacing:-.06em;margin:24px 0}
+.visual-story-head h2 i{color:#a77e50}
+.visual-story-head p{font-size:14px;line-height:1.8;color:#647468;max-width:560px;margin:auto}
+.story-layout{display:grid;grid-template-columns:minmax(210px,.37fr) minmax(0,.63fr);gap:clamp(35px,6vw,105px);max-width:1440px;margin:auto}
+.story-sticky{position:sticky;top:125px;min-height:420px;display:flex;flex-direction:column;align-items:flex-start;padding-top:25px;border-top:1px solid #b9beaf}
+.story-overline,.story-meta{font-size:9px;font-weight:700;letter-spacing:.18em;color:#997952}
+.story-current{display:block;font:400 clamp(110px,13vw,205px)/.9 var(--serif);letter-spacing:-.09em;margin:27px 0;color:#25473b;transition:color .5s}
+.story-current small{font:700 11px var(--sans);letter-spacing:.13em;color:#a28762;vertical-align:middle;margin-left:15px}
+.story-progress{width:min(280px,100%);height:2px;background:#cbd0c3;overflow:hidden;margin-bottom:24px}
+.story-progress span{display:block;width:100%;height:100%;background:#a67c4d;transform:scaleX(.333);transform-origin:left;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.story-sticky p{font-size:13px;line-height:1.75;color:#68786c;max-width:280px;margin:0 0 25px}
+.story-sticky .text-link{font-size:11px;color:#274f40}
+.story-scenes{display:grid;gap:114px}
+.story-scene{position:relative;max-width:880px}
+.story-image{height:clamp(390px,43vw,670px);overflow:hidden;background:#c6c1ad;position:relative;isolation:isolate}
+.story-image:after{content:"";position:absolute;inset:0;border:1px solid #fff9;pointer-events:none}
+.story-image img{display:block;width:100%;height:112%;object-fit:cover;position:absolute;left:0;top:-6%;transform:translate3d(0,var(--photo-y,0px),0) scale(1.02);filter:saturate(.86);will-change:transform}
+.story-scene:nth-child(2) .story-image img{object-position:65% 50%}
+.story-scene:nth-child(3) .story-image img{object-position:50% 56%}
+.story-meta{display:flex;justify-content:space-between;gap:20px;padding:21px 0 0;border-bottom:1px solid #c9cbbd;padding-bottom:17px}
+.story-scene h3{font:400 clamp(32px,3.3vw,48px)/1.1 var(--serif);letter-spacing:-.045em;margin:23px 0 9px}
+.story-scene p{max-width:540px;color:#627267;font-size:13px;line-height:1.8}
+.cinema-ready .story-image{clip-path:inset(0 0 11% 0);transition:clip-path 1s cubic-bezier(.19,1,.22,1)}
+.cinema-ready .story-scene.is-in-view .story-image{clip-path:inset(0)}
+.cinema-ready .story-scene h3,.cinema-ready .story-scene p{transform:translateY(18px);opacity:.5;transition:transform .7s,opacity .7s}
+.cinema-ready .story-scene.is-in-view h3,.cinema-ready .story-scene.is-in-view p{transform:none;opacity:1}
+@media(max-width:900px){.visual-story{padding:90px 42px 100px}.story-layout{grid-template-columns:180px minmax(0,1fr);gap:34px}.story-sticky{top:90px}.story-current{font-size:125px}.story-image{height:470px}.story-scenes{gap:90px}}
+@media(max-width:680px){.visual-story{padding:80px 23px 95px}.visual-story-head{margin-bottom:48px}.visual-story-head h2{font-size:clamp(44px,10vw,60px)}.story-layout{display:block}.story-rail{position:sticky;top:0;z-index:3;background:#efeae0e8;backdrop-filter:blur(14px);border-block:1px solid #c8c9b9;margin-bottom:28px}.story-sticky{position:static;min-height:0;padding:10px 0;border:0;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:8px 18px}.story-overline{font-size:8px}.story-current{font-size:37px;margin:0;grid-column:2;grid-row:1;text-align:right}.story-current small{font-size:8px;margin-left:5px}.story-progress{grid-column:1/-1;width:100%;margin:0}.story-sticky p,.story-sticky .text-link{display:none}.story-scenes{gap:70px}.story-image{height:clamp(320px,88vw,470px)}.story-meta{font-size:8px}.story-scene h3{font-size:37px}.story-scene p{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.cinema-ready .story-image{clip-path:none}.cinema-ready .story-scene h3,.cinema-ready .story-scene p{transform:none;opacity:1}.story-image img{transform:none!important;will-change:auto}.story-current,.story-progress span{transition:none}}

@@ -1,0 +1,38 @@
+:root{--ink:#1b342d;--cream:#f2efe7;--paper:#fbf8f1;--line:#d8d8ca;--gold:#a97c4e;--sage:#e8ebe2;--shadow:0 12px 33px #1b342d0f}
+body{background:var(--cream)}
+::selection{background:#ddb688;color:#1b342d}
+:is(a,button,input,select,textarea):focus-visible{outline:3px solid #bd8756;outline-offset:3px}
+.side{background:#19362e}
+.nav button{border-radius:0;transition:background .25s,transform .25s}
+.nav button:hover{transform:translateX(4px)}
+.nav button.active{background:#2d5145;box-shadow:inset 3px 0 #d5a66e}
+.topbar{background:#f8f5ed}
+.preview-alert{background:#eee1c6}
+.content{padding-top:38px}
+.hero{border-radius:0;min-height:335px;padding:46px 50px;background:#173129 url('/assets/marrakech-architecture.jpg') right 50%/45% auto no-repeat;isolation:isolate;box-shadow:0 20px 38px #19362e17;animation:hero-enter .75s ease both}
+.hero:before{content:"";position:absolute;inset:0;width:auto;height:auto;transform:none;background:linear-gradient(90deg,#173129 0%,#173129 48%,#173129b8 68%,#17312916 100%);opacity:1;z-index:0}
+.hero:after{display:none}
+.hero>*{max-width:630px}
+.hero h1{font-size:clamp(40px,4.2vw,63px);line-height:1.03;letter-spacing:-.055em;max-width:590px}
+.hero p{font-size:14px;max-width:480px}
+.hero-image-caption{display:block;margin-top:23px;color:#d9b78b;font-size:9px;font-weight:700;letter-spacing:.17em}
+.metric{border-radius:0;border-top:2px solid #b48756;background:#e6ebe2;padding:25px;transition:transform .3s,background .3s}
+.metric:nth-child(2){background:#eee9dc}.metric:nth-child(3){background:#e6e7da}
+.metric:hover{transform:translateY(-4px);background:#f5f1e9}
+.metric-number{font-size:44px}.metric-label{font-size:12px}
+.card{border-radius:0;box-shadow:none;transition:border-color .3s,box-shadow .3s}
+.case-card{min-height:220px;position:relative;overflow:hidden}
+.case-card:before{content:"";position:absolute;right:-43px;top:-43px;width:86px;height:86px;border:1px solid #c2cbb9;transform:rotate(45deg)}
+.case-card:hover{transform:translateY(-5px);border-color:#a8b5a4;box-shadow:0 17px 35px #1b342d14}
+.button{border-radius:0;transition:background .2s,transform .2s}.button:hover{transform:translateY(-2px)}
+.badge{border-radius:2px}.notice{border-radius:0}
+@keyframes hero-enter{from{opacity:.6;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:950px){.hero{background-size:55% auto}}
+@media(max-width:680px){
+  .side{background:#19362e}.nav button:hover{transform:none}.nav button.active{box-shadow:inset 0 -2px #d5a66e}
+  .content{padding-top:20px}.hero{min-height:365px;padding:28px;background-position:right center;background-size:100% auto}
+  .hero:before{background:linear-gradient(90deg,#173129e8 0%,#173129de 55%,#173129ad 100%)}
+  .hero h1{font-size:clamp(39px,10vw,49px)}.hero p{font-size:13px}
+  .hero-image-caption{font-size:8px;margin-top:18px}.metric{padding:19px 22px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
