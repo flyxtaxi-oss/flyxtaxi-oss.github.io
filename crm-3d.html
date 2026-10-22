@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173c35">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'">
+  <meta name="description" content="Démonstration fictive du CRM 3D Dossier Immo Maroc, sans compte ni données client.">
+  <title>CRM 3D · Dossier Immo Maroc</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/crm-spatial.css">
+  <link rel="stylesheet" href="/crm-3d.css">
+  <script type="module" src="/crm-3d.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="topbar">
+    <a class="brand" href="/">Dossier <em>Immo</em> <span>MAROC</span></a>
+    <nav aria-label="Navigation"><a href="/">Le projet</a><a href="/demo.html">Dossier fictif</a><a href="/crm-3d.html" aria-current="page">CRM 3D</a></nav>
+    <span class="demo-pill">Prototype · données fictives</span>
+  </header>
+  <main id="main">
+    <div class="intro">
+      <div><p class="eyebrow">ESPACE AGENCE / EXPLORATION</p><h1>Voir le parcours <em>autrement.</em></h1><p>Un quartier de relations : chaque bâtiment représente une étape, sa hauteur le nombre de contacts. Sélectionnez une étape pour explorer les prochaines actions.</p></div>
+      <div class="intro-stat"><span>07</span><small>étapes du parcours</small><strong>03 contacts fictifs</strong></div>
+    </div>
+    <div class="prototype-banner" role="note"><strong>Démo de présentation.</strong> Tous les noms et biens sont fictifs. Cette page n’enregistre rien et ne donne aucun accès à l’application privée.</div>
+    <div class="crm-spatial-layout">
+      <section class="crm-atlas" aria-label="Vue spatiale des étapes du CRM">
+        <div class="atlas-heading"><div><span class="eyebrow">LE QUARTIER DES RELATIONS</span><h2>Une perspective sur chaque étape.</h2></div><span class="atlas-live"><span></span>3 contacts fictifs</span></div>
+        <div class="atlas-viewport" data-angle="center">
+          <div class="atlas-grid" aria-hidden="true"></div>
+          <div class="atlas-model">
+            <div class="atlas-ground" aria-hidden="true"><div class="atlas-road road-one"></div><div class="atlas-road road-two"></div><div class="atlas-garden garden-one"></div><div class="atlas-garden garden-two"></div><div class="atlas-water"></div></div>
+            <div class="atlas-sign" aria-hidden="true">PARCOURS AGENCE</div>
+            <div id="buildings"></div>
+          </div>
+          <div class="atlas-compass" aria-hidden="true">N<br>↑</div>
+        </div>
+        <div class="atlas-footer"><p>Chaque volume représente une étape.<br>La hauteur suit le nombre de contacts.</p><div class="atlas-controls" role="group" aria-label="Orientation de la vue"><button type="button" data-turn="left" aria-label="Tourner la vue à gauche">↶</button><button type="button" data-turn="center" aria-label="Vue centrale">◇</button><button type="button" data-turn="right" aria-label="Tourner la vue à droite">↷</button></div></div>
+        <div class="atlas-legend" id="legend" aria-label="Filtrer par étape"></div>
+      </section>
+      <section class="next-steps" aria-labelledby="next-title"><span class="eyebrow">À PORTÉE DE MAIN</span><h2 id="next-title">Vos prochains pas</h2><p id="result-count" class="result-count" aria-live="polite"></p><div id="contact-list" class="contact-list"></div></section>
+    </div>
+    <footer><span>Dossier Immo Maroc · concept produit en construction</span><a href="/demo.html">Explorer le dossier fictif ↗</a></footer>
+  </main>
+</body>
+</html>
